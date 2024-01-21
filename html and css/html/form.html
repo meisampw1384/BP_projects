@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>table and form
+    </title>
+</head>
+<style>
+    table,tr,td{
+        border-style: groove;
+        border-collapse: collapse;
+    }
+</style>
+<body dir="rtl">
+    <form action="">
+        <table style="width: 500 ;; border:solid blue" align="center">
+            <tr>
+                <td style="width: 150; text-align:center;">نام کاربری:</td>
+                <td><input type="text" placeholder="نام کاربری خود را وارد کنید"></td>
+            </tr>
+            <tr>
+                <td style="width: 150; text-align:center;">ایمیل:</td>
+                <td><input type="email" placeholder="ایمیل خود را وارد کنید"></td>
+            </tr>
+            <tr>
+                <td style="width: 200; text-align:center;">رمز عبور:</td>
+                <td><input type="password" minlength="8" placeholder="رمز عبور خود را وارد کنید"></td>
+            </tr>
+            <tr>
+                <td style="width: 200; text-align:center;" valign="top">آدرس:</td>
+                <td><textarea cols="30" rows="10" ></textarea></td>"
+               
+            </tr>
+            <tr>
+                <td style="width: 200; text-align:center;" valign="top">جنسیت:</td>
+                <td><input type="radio" name="m">مرد
+                    <input type="radio" name="m">زن</td>
+            </tr>
+            <tr>
+                <td style="width: 200; text-align:center;" valign="top">شهر:</td>
+                <td> <select>
+                    <option value="">شیراز</option>
+                    <option value="">اصفهان</option>               
+                    <option value="">تبریز</option>
+                    <option value="">اهواز</option>
+                    <option value="">گلستان</option>
+                    <option value="">مشهد</option>
+                    <option value="">بابل</option>
+                    <option value="">بوشهر</option>
+                    <option value="">تهران</option>
+                    <option value="">سیستان</option>
+                </select></td>
+                
+            </tr>
+            <tr>
+                <td style="width: 200;"align:center>علاقه مندی ها:</td>
+                <td><input type="checkbox">ورزش<input type="checkbox">هنر<input type="checkbox">درس<input type="checkbox">برنامه نویسی</td>
+            </tr>
+            <tr>
+                <td style="width: 200;"align:center>فایل عکس شما:</td>
+                <td><input type="file"></td>
+            </tr>
+            <tr style="text-align: center;">
+                <td colspan="2" style="height: 200;"><input type="submit" value="ثبت نهایی" style="height: 140;">
+                <input type="reset" value="پاک کردن فرم"></td>
+            </tr>
+        </table>
+    </form>
+ 
+</body>

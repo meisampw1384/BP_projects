@@ -1,0 +1,50 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="3.0">
+    <attributes>
+        <attribute name="name" value=""/>
+        <attribute name="authors" value="RSKALA"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2023-11-02 09:26:20 PM"/>
+        <attribute name="created" value="UlNLQUxBO0RFU0tUT1AtMEszQUZHOTsyMDIzLTExLTAyOzAzOjAyOjQ0IFBNOzI3MzQ="/>
+        <attribute name="edited" value="UlNLQUxBO0RFU0tUT1AtMEszQUZHOTsyMDIzLTExLTAyOzA5OjI2OjIwIFBNOzY7Mjg1Mw=="/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <declare name="N" type="Integer" array="False" size=""/>
+            <input variable="N"/>
+            <declare name="i" type="Integer" array="False" size=""/>
+            <declare name="A" type="Integer" array="True" size="N"/>
+            <for variable="i" start="0" end="N-1" direction="inc" step="1">
+                <input variable="A[i]"/>
+            </for>
+            <declare name="x" type="Integer" array="False" size=""/>
+            <input variable="x"/>
+            <declare name="j" type="Integer" array="False" size=""/>
+            <assign variable="j" expression="-1"/>
+            <for variable="i" start="0" end="N-1" direction="inc" step="1">
+                <if expression="A[i]=x">
+                    <then>
+                        <assign variable="j" expression="i"/>
+                    </then>
+                    <else/>
+                </if>
+            </for>
+            <if expression="j==-1">
+                <then>
+                    <for variable="i" start="0" end="N-1" direction="inc" step="1">
+                        <output expression="A[i]" newline="True"/>
+                    </for>
+                </then>
+                <else>
+                    <for variable="i" start="j" end="N-2" direction="inc" step="1">
+                        <assign variable="A[i]" expression="A[i+1]"/>
+                    </for>
+                    <for variable="i" start="0" end="N-2" direction="inc" step="1">
+                        <output expression="A[i]" newline="True"/>
+                    </for>
+                </else>
+            </if>
+        </body>
+    </function>
+</flowgorithm>

@@ -1,0 +1,50 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="3.0">
+    <attributes>
+        <attribute name="name" value=""/>
+        <attribute name="authors" value="RSKALA"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2023-11-03 06:02:23 PM"/>
+        <attribute name="created" value="UlNLQUxBO0RFU0tUT1AtMEszQUZHOTsyMDIzLTExLTAyOzA4OjE5OjE2IFBNOzI3NDY="/>
+        <attribute name="edited" value="UlNLQUxBO0RFU0tUT1AtMEszQUZHOTsyMDIzLTExLTAzOzA2OjAyOjIzIFBNOzM7Mjg0NQ=="/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <declare name="A" type="Integer" array="False" size=""/>
+            <declare name="B" type="Integer" array="False" size=""/>
+            <declare name="C" type="Integer" array="False" size=""/>
+            <declare name="temp" type="Integer" array="False" size=""/>
+            <input variable="A"/>
+            <input variable="B"/>
+            <input variable="C"/>
+            <if expression="A&lt;C">
+                <then>
+                    <assign variable="temp" expression="A"/>
+                    <assign variable="A" expression="C"/>
+                    <assign variable="C" expression="temp"/>
+                </then>
+                <else/>
+            </if>
+            <if expression="B&gt;A">
+                <then>
+                    <assign variable="temp" expression="B"/>
+                    <assign variable="B" expression="A"/>
+                    <assign variable="A" expression="temp"/>
+                </then>
+                <else/>
+            </if>
+            <if expression="C&gt;B">
+                <then>
+                    <assign variable="temp" expression="B"/>
+                    <assign variable="B" expression="C"/>
+                    <assign variable="C" expression="temp"/>
+                </then>
+                <else/>
+            </if>
+            <output expression="A" newline="True"/>
+            <output expression="B" newline="True"/>
+            <output expression="C" newline="True"/>
+        </body>
+    </function>
+</flowgorithm>

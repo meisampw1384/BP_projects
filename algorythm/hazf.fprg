@@ -1,0 +1,51 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="3.0">
+    <attributes>
+        <attribute name="name" value=""/>
+        <attribute name="authors" value="RSKALA"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2023-11-03 04:12:22 PM"/>
+        <attribute name="created" value="UlNLQUxBO0RFU0tUT1AtMEszQUZHOTsyMDIzLTExLTAzOzAzOjUyOjAwIFBNOzI3MzI="/>
+        <attribute name="edited" value="UlNLQUxBO0RFU0tUT1AtMEszQUZHOTsyMDIzLTExLTAzOzA0OjEyOjIyIFBNOzE7Mjg0MQ=="/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <declare name="N" type="Integer" array="False" size=""/>
+            <input variable="N"/>
+            <declare name="arr" type="Integer" array="True" size="N"/>
+            <declare name="resultsize" type="Integer" array="False" size=""/>
+            <assign variable="resultsize" expression="0"/>
+            <declare name="i" type="Integer" array="False" size=""/>
+            <for variable="i" start="0" end="N-1" direction="inc" step="1">
+                <input variable="arr[i]"/>
+            </for>
+            <declare name="x" type="Integer" array="False" size=""/>
+            <input variable="x"/>
+            <for variable="i" start="0" end="N-1" direction="inc" step="1">
+                <if expression="arr[i] != x">
+                    <then>
+                        <assign variable="resultsize" expression="resultsize + 1"/>
+                    </then>
+                    <else/>
+                </if>
+            </for>
+            <declare name="resultarr" type="Integer" array="True" size="resultsize"/>
+            <declare name="j" type="Integer" array="False" size=""/>
+            <assign variable="j" expression="0"/>
+            <for variable="i" start="0" end="N-1" direction="inc" step="1">
+                <if expression="arr[i] != x">
+                    <then>
+                        <assign variable="resultarr[j]" expression="arr[i]"/>
+                        <assign variable="j" expression="j+1"/>
+                    </then>
+                    <else/>
+                </if>
+            </for>
+            <for variable="i" start="0" end="resultsize - 1" direction="inc" step="1">
+                <output expression="resultarr[i]" newline="False"/>
+                <output expression="&quot;   &quot;" newline="False"/>
+            </for>
+        </body>
+    </function>
+</flowgorithm>
