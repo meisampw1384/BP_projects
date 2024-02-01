@@ -25,5 +25,10 @@ void order_delivered(information_student_or_orders*& phead) {
     for (int i = 1; i < n; i++) {
         temp = temp->next_student;
     }
+    if (strcmp(temp->Orderstatus,"Cancelled")==0){
+        cout<<Red<<"The order is Cancelled and you cannot deliver the order!\n"<<Reset<<'\n';
+    }
+    else{
     strcpy(temp->Orderstatus, "delivered");
+    }
 }
