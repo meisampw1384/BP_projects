@@ -13,7 +13,7 @@ void menu() {
     cout << Yellow << "\nThis is Menu\n" << Reset;
     cout << Blue << "----------------------------\n" << Reset;
     cout << "zereshk polo" << Green << " (0)" << Reset << "\n";
-    cout << "chorme sabzi" << Green << " (1)" << Reset << "\n";
+    cout << "ghorme sabzi" << Green << " (1)" << Reset << "\n";
     cout << "kebab" << Green << " (2)" << Reset << "\n";
     cout << "tahchin" << Green << " (3)" << Reset << "\n";
     cout << "Dizi" << Green << " (4)" << Reset << "\n";

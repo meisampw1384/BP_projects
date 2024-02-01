@@ -53,7 +53,7 @@ void New_order(struct information_student_or_orders*& phead) {
                 strcpy(new_food->food_ordered, "zereshk polo");
                 break;
             case 1:
-                strcpy(new_food->food_ordered, "chorme sabzi");
+                strcpy(new_food->food_ordered, "ghorme sabzi");
                 break;
             case 2:
                 strcpy(new_food->food_ordered, "kebab");

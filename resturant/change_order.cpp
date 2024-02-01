@@ -110,7 +110,7 @@ void change_order(information_student_or_orders*& phead) {
             strcpy(tempfood->food_ordered, "zereshk polo");
             break;
         case 1:
-            strcpy(tempfood->food_ordered, "chorme sabzi");
+            strcpy(tempfood->food_ordered, "ghorme sabzi");
             break;
         case 2:
             strcpy(tempfood->food_ordered, "kebab");
@@ -155,7 +155,7 @@ void change_order(information_student_or_orders*& phead) {
                 strcpy(new_food->food_ordered,"zereshk polo");
                 break;
             case 1:
-                strcpy(new_food->food_ordered,"chorme sabzi");
+                strcpy(new_food->food_ordered,"ghorme sabzi");
                  
                 break;
             case 2:

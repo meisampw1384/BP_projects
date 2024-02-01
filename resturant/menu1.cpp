@@ -14,7 +14,7 @@ void menu1(information_student_or_orders *&phead) {
     cout << Yellow << "\nThis is Menu\n" << Reset;
     cout << Blue << "----------------------------\n" << Reset;
     cout << "zereshk polo\n";
-    cout << "chorme sabzi\n";
+    cout << "ghorme sabzi\n";
     cout << "kebab\n";
     cout << "tahchin\n";
     cout << "Dizi\n";

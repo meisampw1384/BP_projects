@@ -15,7 +15,7 @@ void Review(information_student_or_orders *&phead) {
     while (temp) {
         cout << Green << temp->num_of_order <<"    "<< temp->num_of_students <<"    "<< temp->name <<"    "<< temp->Orderstatus <<"    ";
         food_ordered *temp_food = temp->foods;
-        char name_foods[9][30]={"zereshk polo","chorme sabzi","kebab","tahchin","Dizi","Bademjan","khoresh mast","Doogh","beh limoo"};
+        char name_foods[9][30]={"zereshk polo","ghorme sabzi","kebab","tahchin","Dizi","Bademjan","khoresh mast","Doogh","beh limoo"};
         int numberfood[10]={0};
         while(temp_food){
             for (int i=0;i<9;i++){
