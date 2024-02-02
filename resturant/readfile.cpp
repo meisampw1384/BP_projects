@@ -10,7 +10,6 @@ void readfile(information_student_or_orders *&phead) {
 
         if (fread(new_student, sizeof(information_student_or_orders) - sizeof(food_ordered*), 1, readfile) == 0) {
             break;
-
         }
 
         new_student->next_student = nullptr;

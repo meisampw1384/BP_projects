@@ -9,27 +9,27 @@ using namespace std;
 #define Yellow "\033[33m"
 #define Blue "\033[34m"
 void change_order(information_student_or_orders*& phead) {
-    information_student_or_orders* temp = phead;
+    information_student_or_orders* temp_phead = phead;
     cout << "\nWhich order do you want to change?\n";
 
-    while (temp != nullptr) {
-        cout << Green << temp->name << '-' << Reset << temp->num_of_order << '\n';
-        temp = temp->next_student;
+    while (temp_phead != nullptr) {
+        cout << Green << temp_phead->name << '-' << Reset << temp_phead->num_of_order << '\n';
+        temp_phead = temp_phead->next_student;
     }
     int x;
     cout << "Enter the number of order:";
     cin >> x;
-    temp = phead;
+    temp_phead = phead;
     for (int i = 1; i < x; i++) {
-        temp = temp->next_student;
+        temp_phead = temp_phead->next_student;
     }
-    food_ordered* tempfood = temp->foods;
-    if (strcmp(temp->Orderstatus, "delivered") == 0) {
+    food_ordered* tempfood = temp_phead->foods;
+    if (strcmp(temp_phead->Orderstatus, "delivered") == 0) {
         cout << Red << "The order is delivered!\n" << Reset;
         cout << "---------------------\n";
         Heil_Hitler(phead);
     }
-    if (strcmp(temp->Orderstatus, "Cancelled") == 0) {
+    if (strcmp(temp_phead->Orderstatus, "Cancelled") == 0) {
         cout << Red << "The order is cancelled!\n" << Reset;
         cout << "---------------------\n";
         Heil_Hitler(phead);
@@ -48,8 +48,8 @@ void change_order(information_student_or_orders*& phead) {
     }
     switch (n) {
     case 1: {
-        if (temp->Number_of_food == 1) {
-            cout << Red << "You must have at least two dish!\n";
+        if (temp_phead->Number_of_food == 1) {
+            cout << Red << "You must have at least two dishes!\n";
             cout << "--------------------------\n";
             Heil_Hitler(phead);
         }
@@ -64,22 +64,22 @@ void change_order(information_student_or_orders*& phead) {
         cout << "Enter number:";
         cin >> x;
         cout<<"---------\n";
-        food_ordered *beforetemp=nullptr;
-        tempfood=temp->foods;
+        food_ordered *before_temp_phead=nullptr;
+        tempfood=temp_phead->foods;
         if (x == 0) {
-        temp->foods = tempfood->next_food;
+        temp_phead->foods = tempfood->next_food;
         delete tempfood;
-        temp->Number_of_food-=1;
+        temp_phead->Number_of_food-=1;
          } 
         else{
-        tempfood = temp->foods;
+        tempfood = temp_phead->foods;
         for (int i = 0; i < x; i++) {
-            beforetemp = tempfood;
+            before_temp_phead = tempfood;
             tempfood = tempfood->next_food;
         }
-        beforetemp->next_food=tempfood->next_food;
+        before_temp_phead->next_food=tempfood->next_food;
         delete tempfood;
-        temp->Number_of_food-=1;
+        temp_phead->Number_of_food-=1;
     }
     break;
     }
@@ -95,7 +95,7 @@ void change_order(information_student_or_orders*& phead) {
         int x1;
         cout << "Enter number:";
         cin >> x1;
-        tempfood=temp->foods;
+        tempfood=temp_phead->foods;
         for (int i=0;i<x1;i++){
             tempfood=tempfood->next_food;
         }
@@ -189,12 +189,12 @@ void change_order(information_student_or_orders*& phead) {
             
                 
         }
-        tempfood=temp->foods;
+        tempfood=temp_phead->foods;
         while(tempfood->next_food){
             tempfood=tempfood->next_food;
         }
         tempfood->next_food=new_food;
-        temp->Number_of_food+=1;
+        temp_phead->Number_of_food+=1;
         break;
     }
 
